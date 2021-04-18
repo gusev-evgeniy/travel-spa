@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
 
-  video {
+  img {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
