@@ -13,8 +13,10 @@ export const WrapperNavbar = styled.nav`
       i {
         color: white;
         font-size: 25px;
+        cursor: pointer;
       }
     }
+    
     ._container {
       height: 100%;
       display: flex;
@@ -35,9 +37,9 @@ export const WrapperNavbar = styled.nav`
     }
 
     .navbar__menu {
+      height: 100%;
       display: flex;
       justify-content: end;
-      height: 100%;
       align-items: center;
 
       ul {

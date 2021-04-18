@@ -9,14 +9,13 @@ export const SidebarWrapper = styled.div`
   justify-content: start;
   align-items: center;
   position: absolute;
-  left: 100%;
-  opacity: 0;
   top: 80px;
-  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  transition: all 0.7s ease;
+  z-index:10;
 
   &.activate {
-    left: 0;
-   opacity: 1;
+    transform: translateX(0);
   }
 
   ul {
@@ -46,6 +45,10 @@ export const SidebarWrapper = styled.div`
         border-radius: 0;
       }
     }
+  }
+  
+  a {
+    width: 100%
   }
 
   button {

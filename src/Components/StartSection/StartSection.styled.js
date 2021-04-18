@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
 
-  img {
+  video {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
@@ -47,7 +47,18 @@ export const Wrapper = styled.div`
       border-radius: 2px;
       margin: 6px;
       cursor: pointer;
+
+      &:active {
+        background-color: white;
+        color: black;
+        transition: all 0.3s ease-out;
+      }
     }
+  }
+
+  
+  .fa-play-circle {
+    margin-left: 4px;
   }
 
   @media screen and (max-width: 960px) {
@@ -65,14 +76,31 @@ export const Wrapper = styled.div`
     p {
       font-size: 30px;
     }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    h2 {
+     text-align: center;
+     line-height: 4rem;
+    }
+
+    p {
+      text-align: center;
+      padding: 0 10px;
+      line-height: 2.5rem;
+    }
 
     .buttons {
-      display: block;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
       text-decoration: none;
+      align-items: center;
     }
 
     button {
-      width: 100%;
+      width: 90%;
     }
   }
 `

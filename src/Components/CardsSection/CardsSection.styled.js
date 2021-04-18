@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 4rem;
+  padding: 3rem 5%;
   background: #fff;
 
 h2 {
   font-size: 2em;
   text-align: center;
   font-weight: 700;
+  margin: 0 1rem 2rem 1rem;
 }
 
 ul {
@@ -18,7 +19,9 @@ ul {
   justify-content: center;
 
   @media screen and (max-width: 900px) {
-  flex-direction:column
-}
+    flex-direction:column;
+    max-width: 530px;
+    align-items: center;
+  }
 }
 `

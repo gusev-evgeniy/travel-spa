@@ -1,19 +1,29 @@
+import { Route } from 'react-router';
 import './App.css';
-import { CardsSection } from './Components/CardsSection/CardsSection';
-import { Footer } from './Components/Footer/Footer';
 import { Navbar } from './Components/Navbar';
-import { Sidebar } from './Components/Sidebar/Sidebar';
-import { StartSection } from './Components/StartSection/StartSection';
+import { Home } from './Pages/Home';
+import { Products } from './Pages/Products';
+import { Services } from './Pages/Services';
+import { SignUp } from './Pages/SignUp';
 
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <StartSection />
-      <CardsSection />
-      <Footer />
-    </div>
+      <Route exact path='/'>
+        <Home />
+      </Route>
+      <Route path='/products'>
+        <Products />
+      </Route>
+      <Route path='/serveces'>
+        <Services />
+      </Route>
+      <Route path='/sign-up'>
+        <SignUp />
+      </Route>
+    </>
   );
 }
 

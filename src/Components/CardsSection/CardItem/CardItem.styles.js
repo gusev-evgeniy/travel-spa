@@ -12,12 +12,14 @@ export const Wrapper = styled.li`
 
   .image-wrapper {
     width: 100%;
-    background-color: red;
+    height: 270px;
     position: relative;
+    overflow:hidden;
   }
 
   img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     &:hover {
       transform: scale(1.1);
@@ -44,9 +46,5 @@ export const Wrapper = styled.li`
     padding: 20px 30px 30px;
     font-size: 18px;
     line-height: 24px;
-  }
-
-  span {
-
   }
 `

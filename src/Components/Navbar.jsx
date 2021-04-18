@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { WrapperNavbar } from './Navbar.styled'
-import { Sidebar } from './Sidebar/Sidebar';
+import { Sidebar } from './Sidebar/Sidebar'
+
+
+const MENU_ITEMS = [{ name: 'Home', link: '/' }, { name: 'Service', link: '/serveces' }, { name: 'Products', link: '/products' }]
 
 export const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -11,44 +14,38 @@ export const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
-    if (window.innerWidth <= 1200) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-  console.log(window.innerWidth)
+    if (window.innerWidth <= 1200) setButton(false);
+    else setButton(true)
+  }
+
   useEffect(() => {
     showButton();
-  }, []);
+  }, [])
+
+  const navlist = () => {
+    return MENU_ITEMS.map((item, index) => {
+      return <li className='navbar__item'>
+        <Link key={index} to={item.link} className='navbar__links' onClick={closeMobileMenu}>{item.name}</Link>
+      </li>
+    })
+  }
 
   const showMenu = () => {
-    if (!button) {
-      console.log('button')
-      return (<div className='menu-icon' onClick={handleClick}>
+    if (!button) return (
+      <div className='menu-icon' onClick={handleClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-      </div>)
-    }
-
-    else {
-      console.log('not button')
-      return (
-        <div className="navbar__menu">
-          <ul>
-            <li className='navbar__item'>
-              <Link to='/' className='navbar__links'>Home</Link>
-            </li>
-            <li className='navbar__item'>
-              <Link to='/' className='navbar__links'>Service</Link>
-            </li>
-            <li className='navbar__item'>
-              <Link to='/' className='navbar__links'>Product</Link>
-            </li>
-          </ul>
+      </div>
+    )
+    else return (
+      <div className="navbar__menu">
+        <ul>
+          {navlist()}
+        </ul>
+        <Link to='/sign-up'>
           <button className='navbar__button' >SIGN UP</button>
-        </div>
-      )
-    }
+        </Link>
+      </div>
+    )
   }
 
   window.addEventListener('resize', showButton);
@@ -56,14 +53,14 @@ export const Navbar = () => {
   return (<>
     <WrapperNavbar className='navbar'>
       <div className='_container'>
-        <i className='navbar__logo' to='/'>
+        <Link className='navbar__logo' to='/'>
           <h1>TRVL</h1>
-          <Link className='fab fa-typo3' />
-        </i>
+          <i className='fab fa-typo3' />
+        </Link>
         {showMenu()}
       </div>
     </WrapperNavbar>
-    <Sidebar clicked={click} />
+    <Sidebar clicked={click} navlist={navlist} closeMobileMenu={closeMobileMenu} />
   </>
   )
 }
