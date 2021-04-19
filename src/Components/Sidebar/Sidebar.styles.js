@@ -8,7 +8,7 @@ export const SidebarWrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 80px;
   transform: translateX(-100%);
   transition: all 0.7s ease;
@@ -70,5 +70,5 @@ export const SidebarWrapper = styled.div`
         color: black;
         transition: all 0.3s ease-out;
       }
-    }
+  }
 `

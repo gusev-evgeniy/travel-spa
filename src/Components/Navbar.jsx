@@ -6,7 +6,7 @@ import { Sidebar } from './Sidebar/Sidebar'
 
 const MENU_ITEMS = [{ name: 'Home', link: '/' }, { name: 'Service', link: '/serveces' }, { name: 'Products', link: '/products' }]
 
-export const Navbar = () => {
+export const Navbar = ({ setOverflowAuto }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(false);
 

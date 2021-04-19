@@ -55,7 +55,6 @@ export const Wrapper = styled.div`
       }
     }
   }
-
   
   .fa-play-circle {
     margin-left: 4px;
@@ -92,6 +91,14 @@ export const Wrapper = styled.div`
     }
 
     .buttons {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      text-decoration: none;
+      align-items: center;
+    }
+
+    a {
       display: flex;
       width: 100%;
       flex-direction: column;

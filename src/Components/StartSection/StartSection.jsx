@@ -8,9 +8,9 @@ export const StartSection = () => {
       <h2>adventure awaits</h2>
       <p>What are you waiting for?</p>
       <div className="buttons">
-        <button className='btn-outline'>get started</button>
-        <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>
-          <button className='btn-fill'>watch trailer <i className='far fa-play-circle' /> </button>
+        <button className='btn btn-outline'>get started</button>
+        <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='blank'>
+          <button className='btn btn-fill'>watch trailer <i className='far fa-play-circle' /> </button>
         </a>
       </div>
     </Wrapper>
