@@ -24,8 +24,8 @@ export const Navbar = ({ setOverflowAuto }) => {
 
   const navlist = () => {
     return MENU_ITEMS.map((item, index) => {
-      return <li className='navbar__item'>
-        <Link key={index} to={item.link} className='navbar__links' onClick={closeMobileMenu}>{item.name}</Link>
+      return <li key={index} className='navbar__item'>
+        <Link to={item.link} className='navbar__links' onClick={closeMobileMenu}>{item.name}</Link>
       </li>
     })
   }

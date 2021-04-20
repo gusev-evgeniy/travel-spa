@@ -4,9 +4,11 @@ export const PagesWrapper = styled.div`
 display: flex;
 justify-content: center;
 
+overflow: hidden;
+
   img {
     position: absolute;
-       left: 0;
+    left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -15,9 +17,11 @@ justify-content: center;
   }
 
   h2 {
-    margin-top: 50vh;
+    margin-top: 45vh;
     transform: translateY(-50%);
     color: #fff;
-  font-size: 100px;
+    font-size: 10vw;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
   }
 `

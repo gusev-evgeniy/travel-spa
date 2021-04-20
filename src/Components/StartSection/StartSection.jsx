@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
+import { Slider } from '../Slider/Slider'
 import { Wrapper } from './StartSection.styled'
 
 export const StartSection = () => {
   return (
     <Wrapper>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
       <h2>adventure awaits</h2>
       <p>What are you waiting for?</p>
       <div className="buttons">
@@ -13,6 +13,7 @@ export const StartSection = () => {
           <button className='btn btn-fill'>watch trailer <i className='far fa-play-circle' /> </button>
         </a>
       </div>
+      <Slider />
     </Wrapper>
   )
 }
